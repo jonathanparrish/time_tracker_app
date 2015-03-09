@@ -1,19 +1,16 @@
 require 'test_helper'
 
 class LoginsControllerTest < ActionController::TestCase
-  test "should get new" do
-    get :new
-    assert_response :success
+
+  test "developer can see login page" do
+
   end
 
-  test "should get create" do
-    get :create
-    assert_response :success
+  test "developer can logout" do
+
   end
 
-  test "should get destroy" do
-    get :destroy
-    assert_response :success
-  end
+  test "developer login can be created" do
 
+  end
 end
