@@ -18,7 +18,7 @@ class DevelopersControllerTest < ActionController::TestCase
 
   test "developer can be created" do
     assert_difference('Developer.count') do
-      post :create, developer: { email: @developer.email, name:@developer.name, password_digest: @developer.password_digest }
+      post :create, developer: { email: "tina@gmail.com", name: "Tina", password: "111111" }
     end
     assert_redirected_to developer_path(assigns(:developer))
   end
@@ -29,7 +29,7 @@ class DevelopersControllerTest < ActionController::TestCase
   end
 
   test "developer can be updated" do
-    patch :update, id: @developer, developer: { email: @developer.email, name:@developer.name, password_digest: @developer.password_digest }
+    patch :update, id: @developer, developer: { email: @developer.email, name:@developer.name, password:"password" }
     assert_redirected_to developer_path(assigns(:developer))
   end
 
