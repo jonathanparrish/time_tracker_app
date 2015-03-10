@@ -1,2 +1,15 @@
-<h1>Projects#new</h1>
-<p>Find me in app/views/projects/new.html.erb</p>
+<h1>New Project</h1>
+
+<%= form_for @project do |t|%>
+  <div class="field">
+    <%= t.label :name %><br>
+    <%= t.text_field :name %>
+  </div>
+  <div class="field">
+    <%= t.label :hours_allowed %><br>
+    <%= t.number_field :hours_allowed %>
+  </div>
+  <div class="actions">
+    <%= t.submit %>
+  </div>
+<% end %>
