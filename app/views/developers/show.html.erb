@@ -10,6 +10,11 @@
   <%= @developer.email %>
 </p>
 
+<p>
+  <strong>Hours Worked:</strong>
+  <%= @developer.total_hours %>
+</p>
+
 
 <%= link_to 'Edit', edit_developer_path(@developer) %> |
 <%= link_to 'Back', developers_path %>
