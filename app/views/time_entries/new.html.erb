@@ -1,2 +1,20 @@
-<h1>TimeEntries#new</h1>
-<p>Find me in app/views/time_entries/new.html.erb</p>
+<h1>New Time Entry</h1>
+
+<%= form_for @time_entry do |t|%>
+  <div class="field">
+    <%= t.label :developer_id %><br>
+    <%= t.number_field :developer_id %>
+  </div>
+  <div class="field">
+    <%= t.label :hours %><br>
+    <%= t.number_field :hours %>
+  </div>
+  <div class="field">
+    <%= t.label :worked_on %><br>
+    <%= t.date_field :worked_on %>
+  </div>
+  <div class="field">
+    <%= t.label :project_id %><br>
+    <%= t.number_field :project_id %>
+  </div>
+<% end %>

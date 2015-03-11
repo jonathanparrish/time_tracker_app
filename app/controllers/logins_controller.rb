@@ -1,6 +1,7 @@
 class LoginsController < ApplicationController
-  def new
+  skip_before_action :require_login, only: [:new, :create]
 
+  def new
   end
 
   def create
@@ -17,6 +18,7 @@ class LoginsController < ApplicationController
 
   def destroy
     session[:developer_id] = nil
-    redirect_to login_path
+    @current_user = nil
+    redirect_to new_login_path, notice: "You have logged out."
   end
 end
