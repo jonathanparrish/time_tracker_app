@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>ID</th>
       <th>Name</th>
       <th>Hours Allowed</th>
       <th>Total Hours</th>
@@ -15,9 +16,10 @@
   <tbody>
     <% @projects.each do |project| %>
       <tr>
+        <td><%= project.id %></td>
         <td><%= project.name %></td>
         <td><%= project.hours_allowed %></td>
-        <td></td>
+        <td><%= project.project_total_hours %></td>
         <td><%= link_to 'Show', project %></td>
         <td><%= link_to 'Edit', edit_project_path(project) %></td>
         <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>

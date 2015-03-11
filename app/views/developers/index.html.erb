@@ -3,6 +3,7 @@
 <table>
   <thead>
     <tr>
+      <th>ID</th>
       <th>Name</th>
       <th>Email</th>
       <th>Total Hours Worked</th>
@@ -13,6 +14,7 @@
   <tbody>
     <% @developers.each do |developer| %>
       <tr>
+        <td><%= developer.id %></td>
         <td><%= developer.name %></td>
         <td><%= developer.email %></td>
         <td><%= developer.total_hours %></td>
