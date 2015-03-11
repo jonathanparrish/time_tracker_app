@@ -17,6 +17,11 @@
         <td><%= developer.id %></td>
         <td><%= developer.name %></td>
         <td><%= developer.email %></td>
+        <% if developer.total_hours > 40 %>
+          <td class="limit-red"><%= developer.total_hours %></td>
+        <% else %>
+          <td><%= developer.total_hours %></td>
+        <% end %>
         <td><%= developer.total_hours %></td>
         <td><%= link_to 'Show', developer %></td>
         <td><%= link_to 'Edit', edit_developer_path(developer) %></td>

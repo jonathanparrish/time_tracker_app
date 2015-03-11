@@ -20,7 +20,7 @@
         <td><%= project.name %></td>
         <td><%= project.hours_allowed %></td>
         <% if project.project_total_hours > project.hours_allowed %>
-          <td class="project-red"><%= project.project_total_hours %></td>
+          <td class="limit-red"><%= project.project_total_hours %></td>
         <% else %>
           <td><%= project.project_total_hours %></td>
         <% end %>
