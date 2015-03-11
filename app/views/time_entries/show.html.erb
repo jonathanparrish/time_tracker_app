@@ -1,2 +1,25 @@
-<h1>TimeEntries#show</h1>
-<p>Find me in app/views/time_entries/show.html.erb</p>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Project ID:</strong>
+  <%= @time_entry.project_id %>
+</p>
+
+<p>
+  <strong>Date Worked On:</strong>
+  <%= @time_entry.worked_on %>
+</p>
+
+<p>
+  <strong>Hours Worked:</strong>
+  <%= @time_entry.hours %>
+</p>
+
+<p>
+  <strong>Developer ID:</strong>
+  <%= @time_entry.developer_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_time_entry_path(@time_entry) %> |
+<%= link_to 'Back', time_entries_path %>
