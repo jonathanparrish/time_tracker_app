@@ -3,6 +3,7 @@ require 'test_helper'
 class DevelopersControllerTest < ActionController::TestCase
   setup do
     @developer = developers(:one)
+    session[:developer_id] = @developer_id
   end
 
   test "should get developer index" do
