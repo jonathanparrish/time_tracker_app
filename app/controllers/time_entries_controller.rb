@@ -1,5 +1,13 @@
 class TimeEntriesController < ApplicationController
   before_action :set_time_entry, only: [:show, :edit, :update, :destroy]
+  before_action :check_developer, :only => [:edit, :update, :destroy]
+
+  def check_developer
+    unless current_user.id == @time_entry.developer_id
+      redirect_to (request.referrer || root_path), notice: 'You cannot modify someone elses time.'
+      # return
+    end
+  end
 
   def index
     @time_entries = TimeEntry.all

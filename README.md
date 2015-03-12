@@ -12,10 +12,10 @@ Your application should allow the following:
 
 ~done~ People who access any page without logging in are redirected to the login page.
 ~done~ Developers can log in.
-~done~ Developers who have already logged in are not taken back to the login page when they go to the application's root URL.
+~done~  Developers who have already logged in are not taken back to the login page when they go to the application's root URL.
 ~done~ Developers can create/edit/delete other developers.
 ~done~ Developers can create/edit/delete projects.
-1 of 2 ~done~ Developers can create/edit/delete time entries for themselves, not for other developers.
+~done~ 2 of 2 ~done~ Developers can create/edit/delete time entries for themselves, not for other developers.
 ~done~ No one can delete a developer once that developer has made a time entry.
 ~done~ No one can delete a project once that project has a time entry on it.
 There must be a project list page which:
@@ -28,7 +28,7 @@ In terms of code:
 
 You should not use scaffold or Devise.
 ~done~ Passwords should not be stored in the database in plain text.
-Foreign keys should have indices.
+------ Foreign keys should have indices.
 ~done~ You should have at least one developer and one project in your seed data.
 ~done~ Your application UI should look polished and clean, not unfinished like views generated from scaffold do.
 ~done~ You may use whatever web design framework you like (e.g. Bootstrap, Foundation, Bourbon/Neat/etc), but it is not required.
