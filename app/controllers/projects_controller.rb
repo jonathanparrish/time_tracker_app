@@ -28,7 +28,11 @@ class ProjectsController < ApplicationController
 
   def destroy
     @project.destroy
-    redirect_to projects_url, notice: 'Project was deleted.'
+    if @project.errors.count > 0
+      redirect_to projects_url, notice: 'You cannot delete a project with a time entry.'
+    else
+      redirect_to projects_url, notice: 'Project was deleted'
+    end
   end
 
   def show

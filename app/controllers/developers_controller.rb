@@ -28,7 +28,11 @@ class DevelopersController < ApplicationController
 
   def destroy
     @developer.destroy
-    redirect_to developers_url, notice: 'Developer was deleted.'
+    if @developer.errors.count > 0
+      redirect_to developers_url, notice: 'You cannot delete a developer with a time entry.'
+    else
+      redirect_to developers_url, notice: 'Developer was deleted.'
+    end
   end
 
   def show

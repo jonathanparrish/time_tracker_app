@@ -4,7 +4,7 @@ class Developer < ActiveRecord::Base
   validates :password, :length => { :minimum=> 6}
   validates_confirmation_of :password
 
-  has_many :time_entries, dependent: :restrict_with_exception
+  has_many :time_entries, dependent: :restrict_with_error
   has_secure_password
 
   def total_hours
