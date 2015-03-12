@@ -25,6 +25,13 @@ td {
   @include linear-gradient(#777, #444);
 
 }
+div  {
+  color: #050505;
+  padding: 15px 50px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
 
 #container {
   margin: 0 100px;
@@ -35,7 +42,7 @@ p {
   padding: 15px 50px;
   font-size: 15px;
   font-weight: bold;
-  
+
 }
 
 a {
