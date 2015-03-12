@@ -7,7 +7,7 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <%= notice %>
+    <p><%= notice %></p>
     <% if session[:developer_id] %>
       <%= button_to "Log out", login_path(session[:developer_id]), method: :delete %>
     <% end %>
