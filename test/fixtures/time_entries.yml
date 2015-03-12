@@ -7,7 +7,7 @@ one:
   project_id: 1
 
 two:
-  developer_id: 1
+  developer_id: 2
   hours: 9.99
   worked_on: 2015-03-09
   project_id: 1

@@ -28,7 +28,7 @@ In terms of code:
 
 You should not use scaffold or Devise.
 ~done~ Passwords should not be stored in the database in plain text.
------- Foreign keys should have indices.
+~done~ Foreign keys should have indices.
 ~done~ You should have at least one developer and one project in your seed data.
 ~done~ Your application UI should look polished and clean, not unfinished like views generated from scaffold do.
 ~done~ You may use whatever web design framework you like (e.g. Bootstrap, Foundation, Bourbon/Neat/etc), but it is not required.

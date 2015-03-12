@@ -5,6 +5,7 @@ class TimeEntriesControllerTest < ActionController::TestCase
     @time_entry = time_entries(:one)
     @developer = developers(:one)
     session[:developer_id] = @developer.id
+
   end
 
   test "should get time_entry index" do
@@ -20,7 +21,7 @@ class TimeEntriesControllerTest < ActionController::TestCase
 
   test "time_entry can be created" do
     assert_difference('TimeEntry.count') do
-      post :create, time_entry: { hours: @time_entry.hours, worked_on:@time_entry.worked_on, project_id:@time_entry.project_id }
+      post :create, time_entry: { developer_id: @time_entry.developer_id, hours: @time_entry.hours, worked_on: @time_entry.worked_on, project_id: @time_entry.project_id }
     end
     assert_redirected_to time_entry_path(assigns(:time_entry))
   end
@@ -31,12 +32,13 @@ class TimeEntriesControllerTest < ActionController::TestCase
   end
 
   test "time_entry can be updated" do
-    patch :update, id: @time_entry, time_entry: { hours: @time_entry.hours, worked_on:@time_entry.worked_on, project_id:@time_entry.project_id }
+    patch :update, id: @time_entry, time_entry: { developer_id: @time_entry.developer_id, hours: @time_entry.hours, worked_on: @time_entry.worked_on, project_id: @time_entry.project_id }
   end
 
   test "time_entry can be destroyed" do
+    TimeEntry.create(developer_id: 1, hours: 3.5, worked_on: "2015-03-09".to_date, project_id:1)
     assert_difference('TimeEntry.count', -1) do
-      delete :destroy, id: @time_entry
+      delete :destroy, id: @time_entry.id
     end
     assert_redirected_to time_entries_path
   end
