@@ -1,0 +1,43 @@
+
+
+ @import "bourbon";
+ @import "neat";
+
+.limit-red {
+
+  color: red;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #FFF;
+  font-size: 14px;
+  font-family: $verdana;
+  @include linear-gradient(#87CCC9, #D6D6CE);
+}
+
+td {
+  color: #FFF;
+  padding: 15px 50px;
+  font-size: 15px;
+  font-weight: bold;
+  @include linear-gradient(#777, #444);
+
+}
+
+#container {
+  margin: 0 100px;
+}
+
+p {
+  color: #050505;
+  padding: 15px 50px;
+  font-size: 15px;
+  font-weight: bold;
+  
+}
+
+a {
+  color: #050505;
+}

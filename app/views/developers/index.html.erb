@@ -7,7 +7,7 @@
       <th>Name</th>
       <th>Email</th>
       <th>Total Hours Worked</th>
-      <th colspan="3"></th>
+      <th colspan="4"></th>
     </tr>
   </thead>
 
@@ -22,7 +22,6 @@
         <% else %>
           <td><%= developer.total_hours %></td>
         <% end %>
-        <td><%= developer.total_hours %></td>
         <td><%= link_to 'Show', developer %></td>
         <td><%= link_to 'Edit', edit_developer_path(developer) %></td>
         <td><%= link_to 'Destroy', developer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
